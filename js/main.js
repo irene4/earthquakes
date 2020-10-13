@@ -41,8 +41,7 @@ async function createMap() {
 		geojsonMarkerOptions.fillColor = lerpColor('#00ffff', 'ff00ff', feature.properties.mag / 10);
 		console.log(feature.properties);
 		return L.circleMarker(latlng, geojsonMarkerOptions).bindTooltip(
-			`<b style="font-size: 120%">${feature.properties.mag.toString()}</b><br>` +
-				`<span style="font-size:80%">${feature.properties.place}</span>`
+			`<b style="font-size: 120%">${feature.properties.mag.toString()} </b>` + `<span style="font-size:80%"> ${feature.properties.place}</span>`
 		);
 	};
 
